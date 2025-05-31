@@ -12,9 +12,10 @@
         "ghcr.io/coder/devcontainer-features/code-server:1": {
             "host":  "0.0.0.0",
             "auth": "none",
-            "workspace": "/workspaces/dctest"
+            "workspace": "${containerWorkspaceFolder}"
         }
     },
+    "runArgs": [ "--name=devcontainer-example" ],
     "appPort": ["8090:8080"],
     "postCreateCommand": "npm install"
 }
